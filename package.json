@@ -1,0 +1,25 @@
+{
+  "name": "express-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www",
+    "start-dev": "PORT=8080 nodemon --inspect ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rrotaru/node-express-example.git"
+  },
+  "author": "Robert Rotaru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rrotaru/node-express-example/issues"
+  },
+  "homepage": "https://github.com/rrotaru/node-express-example#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4"
+  }
+}

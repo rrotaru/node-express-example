@@ -1,0 +1,14 @@
+{
+    "things" : [
+        {
+            "id" : "1",
+            "name" : "thing 1",
+            "color" : "red"
+        },
+        {
+            "id" : "2",
+            "name" : "thing 2",
+            "color" : "green"
+        }
+    ]
+}
