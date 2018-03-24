@@ -1,0 +1,21 @@
+html
+head
+  title List of things
+  link(rel='stylesheet' href='style.css')
+body
+  h1 Here are your things:
+
+  if things.length > 0
+    ol
+      each thing, index in things
+        li 
+          a(href='/things/' + thing.id, style={color: thing.color, 'text-decoration': 'none'})= thing.name
+  else 
+    span No things are here. :-(
+
+  form(method='POST', action='/things')
+    label Submit a thing below
+    input(type='text', name="name", placeholder='Enter your thing')
+    input(type='text', name="color", placeholder='Enter your thing\'s color')
+    input(type='text', name="birthday", placeholder='Enter your thing\'s birthday')
+    button(type='submit') Submit
