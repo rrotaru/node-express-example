@@ -1,5 +1,5 @@
 'use strict';
-require('dotenv').config()
+require('dotenv').config();
 const mongodb = require('mongodb');
 
 // Use connect method to connect to the server

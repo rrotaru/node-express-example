@@ -1,14 +1,20 @@
 {
-    "things" : [
-        {
-            "id" : "1",
-            "name" : "thing 1",
-            "color" : "red"
-        },
-        {
-            "id" : "2",
-            "name" : "thing 2",
-            "color" : "green"
-        }
-    ]
+    "data": {
+        "things": [{
+            "name": "Waldo",
+            "color": "blue",
+            "id": 1
+        }, {
+            "name": "Keith",
+            "color": "orange",
+            "id": 2
+        }, {
+            "name": "Andrew",
+            "color": "red",
+            "id": 3
+        }]
+    },
+    "meta" : {
+        "/things/thing"
+    }
 }
