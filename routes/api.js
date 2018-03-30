@@ -25,6 +25,13 @@ router.route('/things')
     .then(things => {
         res.json(things);
     });*/
+})
+.delete(function(req, res) {
+    db.collection('things').deleteMany({}, (err, result) => {
+        if (result) {
+            res.json(result);
+        }
+    });
 });
 
 router.route('/things/:thing_id')
@@ -34,7 +41,7 @@ router.route('/things/:thing_id')
     });
 })
 
-.delete(function(req, res, next) {
+.delete(function(req, res, next) {   
     db.collection('things').deleteOne({_id: ObjectID.createFromHexString(req.params.thing_id)}, (err, result) => {
         res.json(result);
     });

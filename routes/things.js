@@ -6,8 +6,8 @@ var Thing = require('../models/thingModel');
 router
 .get('/', function(req, res, next) {
     Thing.find({})
-    .then(things => {
-        res.render('things', {"things": things});
+    .then(things_data => {
+        res.render('things_view', {things_var: things_data});
     });
 })
 

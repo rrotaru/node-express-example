@@ -6,3 +6,17 @@ form > * {
     display: block;
     margin-top: .5em;
 }
+.alert-warn > p {
+    background: #ff787880;
+    padding: 0.2em 1em;
+    font-family: sans-serif;
+    border-radius: 2px;
+    color: #bf0303;
+}
+.alert-info > p {
+    background: #78a8ff80;
+    padding: 0.2em 1em;
+    font-family: sans-serif;
+    border-radius: 2px;
+    color: #0371bf;
+}
