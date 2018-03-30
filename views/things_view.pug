@@ -1,0 +1,30 @@
+html
+head
+  title List of things
+  link(rel='stylesheet' href='style.css')
+body
+  for message in flash
+    a.alert(class='alert-' + message.type)
+      p=message.message
+
+  script
+    include ../assets/refresh.js
+
+  button(onclick='refresh()') Refresh Page
+  button(onclick='removeall()') Delete All
+  h1 Here are your things:
+
+  if things_var.length > 0
+    ol(id='main-list')
+      each thing_item, index in things_var
+        li 
+          a(href='/things/' + thing_item.id, style={color: thing_item.color, 'text-decoration': 'none'})= thing_item.name
+  else 
+    span No things are here. :-(
+
+  form(method='POST', action='/things')
+    label Submit a thing below
+    input(type='text', name="name", placeholder='Enter your thing')
+    input(type='text', name="color", placeholder='Enter your thing\'s color')
+    input(type='text', name="birthday", placeholder='Enter your thing\'s birthday')
+    button(type='submit') Submit
